@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "TabULater",
+  
+  "description": "This app controls your tabs! Drag your tabs into this 
+  app to save them for later so you don't have to leave them open in your browser!",
+  
+  "version": "1.0",
+
+  "permissions": [
+    
+  ],
+  "browser_action": {
+    "default_icon": "tulico.png",
+    "default_popup": "popup.html"
+  }
+}
