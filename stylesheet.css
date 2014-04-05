@@ -33,6 +33,8 @@ img {
 }
 
 .site img {
-	width: 10px;
-	height: auto;	
+	width: 11px;
+	height: 11px;
+	border: none;
+	outline: none;	
 }
