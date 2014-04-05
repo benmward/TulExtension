@@ -9,11 +9,10 @@
     <script type="text/javascript" src="popup.js"></script>
 		<p>
 			<h2>Type or paste URLs below!</h2>
-			<form id="siteEntryForm">
+			<form name="siteEntryForm">
 				<input type="text" name="siteUrl"/>
-				<button type="submit" id="button">Enter</button>
 			</form>
-			
+			<div id="button">Enter</div>
 		</p>
 		<div class="sitelist"></div>
   </body>

@@ -1,21 +1,17 @@
 $(document).ready( function () {
-	$('#button').click( function () {
+	$('#siteEntryForm').submit( function (e) {
+		e.preventDefault();
 		var url = $("input[name=siteUrl]").val();
-		$('.sitelist').append("<div class='site'>"+url+"</div><br>");
+		$('.sitelist').append("<div class='site'>"+url+"<img src='" + chrome.extension.getURL('x.png') + "'></div><br>");
+	//$('span').on('mouseenter', function () {
+	//	$('.site img').show();
+	//}).on('mouseleave', function () {
+	//	$('.site img').hide();
 	});
-	$(document).bind('keypress',pressed);
 });
 
 $(document).on('click','.site', function () {
 	$(this).remove();
 });
 
-function pressed(e)
-{
-    var key = e.charCode ? e.charCode : e.keyCode ? e.keyCode : 0;
-    if(key == 13) {
-        e.preventDefault();
-	var url = $("input[name=siteUrl]").val();
-	$('.sitelist').append("<div class='site'>"+url+"</div><br>");
-    }
-}
+

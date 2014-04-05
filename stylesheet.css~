@@ -31,8 +31,3 @@ img {
 	font-family:arial;
 	font-size:1em;
 }
-
-.site img {
-	width: 10px;
-	height: auto;	
-}
