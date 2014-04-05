@@ -1,0 +1,33 @@
+body {
+	min-width: 500px;
+	min-height: 200px;
+	overflow-x: hidden;
+	text-align:center;
+	margin:auto;
+}
+
+img {
+	margin: 5px;
+	border: 2px solid black;
+	vertical-align: middle;
+	width: 75px;
+	height: 75px;
+}
+
+#button{
+	display: inline-block;
+	height:20px;
+	width:70px;
+	background-color:#cc0000;
+	font-family:arial;
+	font-weight:bold;
+	color:#ffffff;
+	border-radius: 5px;
+	text-align:center;
+	margin-top:2px;
+}
+
+.site {
+	font-family:arial;
+	font-size:1em;
+}
