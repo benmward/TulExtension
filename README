@@ -1,4 +1,4 @@
-TabULater Chrome extension version 3.0 (primary tabbed mode)
+TabULater Chrome extension version 0.3.1 (primary tabbed mode)
 
 To-do:
 - Design/styling, user interface, and instructions improvements
@@ -10,4 +10,9 @@ To-do:
 	(i.e. see code academy jQuery section 5)
 	(going along with this, booting multiple tabs at once)
 	(see chrome.tabs query command, possibly place existing tabs in app)
-- Remove popout mode (at least for now) and have button open tab/web mode
+- Official distribution through Chrome App Store
+
+Distant Future
+- Caching / Page Preview features
+- Social bookmarking aspects?
+- Active promotion

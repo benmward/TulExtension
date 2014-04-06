@@ -3,9 +3,9 @@ body {
 	margin:auto;
 }
 
-.site {
-	padding-top:20px;
-	padding-bottom:-10px;
+
+.control-group {
+	padding-bottom:20px;
 }
 
 .site img {

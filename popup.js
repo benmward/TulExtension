@@ -2,9 +2,8 @@ $(document).ready( function () {
 	$('#siteEntryForm').submit( function (e) {
 		e.preventDefault();
 		var url = $("input[name=siteUrl]").val();
-		
 		url = urlFix(url);
-		$('.sitelist').append('<div class="site"><span class="linkX"><a href='+url+'>   '+url+'   </a><img id="del" src=' + chrome.extension.getURL('x.png') + '></span></div>');
+		$('#sitelist').append('<div class="site"><span class="linkX"><a href='+url+'>   '+url+'   </a><img id="del" src=' + chrome.extension.getURL('x.png') + '></span></div>');
 		$('.site img').hide();
 		$('.site').mouseenter(function() {
 			$('.linkX img').show();
@@ -13,8 +12,7 @@ $(document).ready( function () {
 			$('.linkX img').hide();
 		})
 		$('.linkX img').click(function() {
-			$(this).parent().find('a').remove();
-			$(this).remove();
+			$(this).parent().remove();
 		});
 	});
 	
