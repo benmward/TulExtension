@@ -2,9 +2,12 @@ TabULater Chrome extension version 2.2 (general linking functionality)
 
 To-do:
 - Design/styling, user interface, and instructions improvements
+	- Bootstrap website updates; app hosted on website w/ bootstrap format
 - Extension stores its state so it doesn't get wiped every time it gets closed
-	(perhaps use output file [see loading of x in popup.js] to store state)
+	{sort of implemented via tabbed/web mode}
 - Sessions implemented; some way to organize tabs
 	(possible jQuery commands: draggable, sortable, accordion, etc.)
 	(i.e. see code academy jQuery section 5)
 	(going along with this, booting multiple tabs at once)
+	(see chrome.tabs query command, possibly place existing tabs in app)
+- Remove popout mode (at least for now) and have button open tab/web mode

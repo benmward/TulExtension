@@ -1,51 +1,18 @@
 body {
-	min-width: 500px;
-	min-height: 200px;
-	overflow-x: hidden;
 	text-align:center;
 	margin:auto;
 }
 
-img1 {
-	margin: 5px;
-	border: 2px solid black;
-	vertical-align: middle;
-	width: 75px;
-	height: 75px;
-}
-
-.img2 {
-	margin: 5px;
-	height: 24px;
-	width: 24px;
-	border: none;
-
-
-}
-
-
-#button{
-	display: inline-block;
-	height:20px;
-	width:70px;
-	background-color:#cc0000;
-	font-family:arial;
-	font-weight:bold;
-	color:#ffffff;
-	border-radius: 5px;
-	text-align:center;
-	margin-top:2px;
-}
-
 .site {
-	font-family:arial;
-	font-size:1em;
+	padding-top:20px;
+	padding-bottom:-10px;
 }
 
 .site img {
-	margin: 5px;
-	width: 13px;
-	height: 13px;
+	margin: 2px;
+	margin-left:10px;
+	width: 10px;
+	height: 10px;
 	border: none;
 	outline: none;	
 }
