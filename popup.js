@@ -5,14 +5,18 @@ $(document).ready( function () {
 		if(urlFix(url))
 		{
 			url = urlFix(url);
-			$('.sitelist').append('<div class="site"><span id="linkX"><a href='+url+'>   '+url+'   </a><img src=' + chrome.extension.getURL('x.png') + '></span></div>');
+			$('.sitelist').append('<div class="site"><span class="linkX"><a href='+url+'>   '+url+'   </a><img id="del" src=' + chrome.extension.getURL('x.png') + '></span></div>');
 			$('.site img').hide();
 			$('.site').mouseenter(function() {
-				$('#linkX img').show();
+				$('.linkX img').show();
 			})
 			$('.site').mouseleave(function() {
-				$('#linkX img').hide();
+				$('.linkX img').hide();
 			})
+			$('.linkX img').click(function() {
+				$(this).parent().find('a').remove();
+				$(this).remove();
+			});
 		}
 	//$('span').on('mouseenter', function () {
 	//	$('.site img').show();
