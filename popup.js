@@ -43,14 +43,17 @@ $(document).ready( function () {
 	});
 	
 	var urlFix = function(url) {
-		var http = new RegExp("^https?:\\/\\/www\\.[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,6}\\b([-a-zA-Z0-9@:%_\\+.~#?&//=]*)$","g");
+		var both = new RegExp("^https?:\\/\\/www\\.[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,6}\\b([-a-zA-Z0-9@:%_\\+.~#?&//=]*)$","g");
+		var http = new RegExp("^https?:\\/\\/[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,6}\\b([-a-zA-Z0-9@:%_\\+.~#?&//=]*)$","g");
 		var www = new RegExp("^(https?:\\/\\/)?www\\.[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,6}\\b([-a-zA-Z0-9@:%_\\+.~#?&//=]*)$","g");
-		var valid = new RegExp(".+\\.[a-z]{2,6}\\b([-a-zA-Z0-9@:%_\\+.~#?&//=]*)$","g");
+		var valid = new RegExp(".+\\.[a-z]{2,6}\\b([-a-zA-Z0-9@:%_\\+.~#?&//=]*)/?$","g");
 		if(!valid.test(url)) {
 			alert("Invalid URL!");	return "";	}
+		else if (http.test(url))
+			return url;
 		else if (!www.test(url))
 			return "http://www."+url;
-		else if (!http.test(url))
+		else if (!both.test(url))
 			return "http://"+url;
 		else return url;
 	};
