@@ -1,41 +1,35 @@
 <!doctype html>
 <html>
-  <head>
-  
-    <title>TabULater</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet" href="stylesheet.css" />
-    <link type="text/css" rel="stylesheet" href="stylesheet.css" />
-  </head>
-  <body>
-	  <script type = "text/javascript" src="jQuery.js"></script>
-    <script type="text/javascript" src="popup.js"></script>
-  <div class="container">
-<form class="form-horizontal text-center" id="siteEntryForm">
-	
-<fieldset>
+	<head>
+		<title>TabULater</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet" href="stylesheet.css" />
+		<link type="text/css" rel="stylesheet" href="stylesheet.css" />
+	</head>
+	<body>
+		<script type = "text/javascript" src="jQuery.js"></script>
+		<script type="text/javascript" src="popup.js"></script>
+		<div class="container">
+			<form class="form-horizontal text-center" id="siteEntryForm">
+				<fieldset>
+					<!-- Form Name -->
+					<legend>Type or paste URLs below!</legend>
+					<!-- Text input-->
+					<div class="control-group">
+						<label class="control-label" for="siteUrl"></label>
+						<div class="controls">
+							<input id="siteUrl" name="siteUrl" type="text" placeholder="Enter URLs here" class="input-xlarge">
+						</div>
+					</div>
 
-<!-- Form Name -->
-<legend>Type or paste URLs below!</legend>
-
-<!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="siteUrl"></label>
-  <div class="controls">
-    <input id="siteUrl" name="siteUrl" type="text" placeholder="Enter URLs here" class="input-xlarge">
-    
-  </div>
-</div>
-
-<!-- Button -->
-<div class="control-group">
-  <label class="control-label" for="singlebutton"></label>
-  <div class="controls">
-    <button type="submit" id="singlebutton" name="singlebutton" class="btn btn-primary">Submit</button>
-  </div>
-</div>
-
-</fieldset>
-</form>
+					<!-- Button -->
+					<div class="control-group">
+						<label class="control-label" for="singlebutton"></label>
+						<div class="controls">
+							<button type="submit" id="singlebutton" name="singlebutton" class="btn btn-primary">Submit</button>
+						</div>
+					</div>
+				</fieldset>
+			</form>
 		<div class="sitelist"></div>
-  </body>
+	</body>
 </html>
