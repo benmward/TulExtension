@@ -6,13 +6,23 @@ body {
 	margin:auto;
 }
 
-img {
+img1 {
 	margin: 5px;
 	border: 2px solid black;
 	vertical-align: middle;
 	width: 75px;
 	height: 75px;
 }
+
+.img2 {
+	margin: 5px;
+	height: 24px;
+	width: 24px;
+	border: none;
+
+
+}
+
 
 #button{
 	display: inline-block;
@@ -33,8 +43,9 @@ img {
 }
 
 .site img {
-	width: 11px;
-	height: 11px;
+	margin: 5px;
+	width: 13px;
+	height: 13px;
 	border: none;
 	outline: none;	
 }
