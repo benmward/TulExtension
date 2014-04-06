@@ -1,9 +1,7 @@
-TabULater Chrome extension version 2.0 (general linking functionality)
+TabULater Chrome extension version 2.2 (general linking functionality)
 
 To-do:
 - Design/styling, user interface, and instructions improvements
-- Silently adding "https://www." when needed (regex)
-- Make the "X" delete the line
 - Extension stores its state so it doesn't get wiped every time it gets closed
 	(perhaps use output file [see loading of x in popup.js] to store state)
 - Sessions implemented; some way to organize tabs
