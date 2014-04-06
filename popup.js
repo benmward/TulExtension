@@ -9,7 +9,7 @@ $(document).ready( function () {
 				allTabs.push(tabs[i]);
 			}
 			
-			for(i = 0; i < allTabs.length; i++)
+			for(i = 0; i < allTabs.length - 1; i++)
 			{
 				var url = allTabs[i].url;
 				$('#sitelist').append('<div class="site"><span class="linkX"><a href='+url+'>   '+url+'   </a><img id="del" src=' + chrome.extension.getURL('x.png') + '></span></div>');
@@ -40,6 +40,7 @@ $(document).ready( function () {
 		$('.linkX img').click(function() {
 			$(this).parent().remove();
 		});
+		$('.site').draggable();
 	});
 	
 	var urlFix = function(url) {
