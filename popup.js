@@ -12,7 +12,7 @@ $(document).ready( function () {
 			for(i = 0; i < allTabs.length; i++)
 			{
 				var url = allTabs[i].url;
-				$('.sitelist').append('<div class="site"><span class="linkX"><a href='+url+'>   '+url+'   </a><img id="del" src=' + chrome.extension.getURL('x.png') + '></span></div>');
+				$('#sitelist').append('<div class="site"><span class="linkX"><a href='+url+'>   '+url+'   </a><img id="del" src=' + chrome.extension.getURL('x.png') + '></span></div>');
 			}
 		});
 		
