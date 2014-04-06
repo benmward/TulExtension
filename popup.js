@@ -2,11 +2,12 @@ $(document).ready( function () {
 	$('#siteEntryForm').submit( function (e) {
 		e.preventDefault();
 		var url = $("input[name=siteUrl]").val();
-		$('.sitelist').append('<div class="site"><span id="linkX"><a href='+url+'>'+url+'</a><img src=' + chrome.extension.getURL('x.png') + '></span></div>');
-		$('a').mouseenter(function() {
+		$('.sitelist').append('<div class="site"><span id="linkX"><a href='+url+'>   '+url+'   </a><img src=' + chrome.extension.getURL('x.png') + '></span></div>');
+		$('.site img').hide();
+		$('.site').mouseenter(function() {
 			$('#linkX img').show();
 		})
-		$('a').mouseleave(function() {
+		$('.site').mouseleave(function() {
 			$('#linkX img').hide();
 		})
 	//$('span').on('mouseenter', function () {
