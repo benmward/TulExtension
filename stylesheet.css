@@ -1,10 +1,13 @@
 body {
 	text-align:center;
 	margin:auto;
+	color: 00FF99;
 }
 
 .control-group {
-	padding-bottom:20px;
+	text-align:center;
+	margin:auto;
+	color: 00FF99;
 }
 
 .site img {
@@ -14,4 +17,15 @@ body {
 	height: 10px;
 	border: none;
 	outline: none;	
+}
+
+a {
+	color: white;
+	font-size: 1.5em;
+	line-height: 1.15em;
+	text-align: left;
+}
+a :hover {
+	color: lightgray;
+	font-size: 1.7em;
 }
