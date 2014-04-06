@@ -35,6 +35,12 @@ $(document).ready( function () {
 			return "http://"+url;
 		else return url;
 	};
+	
+	
+	$('.img2').click(function() {
+		chrome.tabs.create({url: "popup.html"});
+		
+	});
 });
 
 $('body').on('click', 'a', function(){
