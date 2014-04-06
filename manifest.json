@@ -10,12 +10,11 @@
 	open in your browser!",
 	
 	"browser_action": {
-    "default_icon": "tulico.png",
-    "default_popup": "popup.html"
+    "default_icon": "tulico.png"
 	},
 	
 	"background": {
-		"scripts": ["popup.js"]
+		"scripts": ["background.js"]
 	},
 	
 	"permissions": ["tabs"]
