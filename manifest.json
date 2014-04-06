@@ -14,7 +14,7 @@
 	},
 	
 	"background": {
-		"scripts": ["background.js"]
+		"scripts": ["background.js, popup.js"]
 	},
 	
 	"permissions": ["tabs"]
