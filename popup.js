@@ -11,8 +11,8 @@ $(document).ready( function () {
 			
 			for(i = 0; i < allTabs.length - 1; i++)
 			{
-				var url = allTabs[i].url;
-				$('#sitelist').append('<div class="site"><span class="linkX"><a href='+url+'>'+url+'</a><img id="del" src=' + chrome.extension.getURL('x.png') + '></span></div>');
+				var url = (allTabs[i].url).substring(0,(allTabs[i].url).length - 1);;
+				$('#sitelist').append('<div class="site"><span class="linkX">'+'<a href='+url+'>'+url+'</a>'+'<img id="del" src=' + chrome.extension.getURL('x.png') + '></span></div>');
 			}
 			$('.site img').hide();
 		$('.site').mouseenter(function() {
@@ -39,7 +39,7 @@ $(document).ready( function () {
 		e.preventDefault();
 		var url = $("input[name=siteUrl]").val();
 		url = urlFix(url);
-		$('#sitelist').append('<div class="site"><span class="linkX"><a href='+url+'>   '+url+'   </a><img id="del" src=' + chrome.extension.getURL('x.png') + '></span></div>');
+		$('#sitelist').append('<div class="site"><span class="linkX"><a href='+url+'>'+url+'</a><img id="del" src=' + chrome.extension.getURL('x.png') + '></span></div>');
 		$('.site img').hide();
 		$('.site').mouseenter(function() {
 			$('.linkX img').show();
