@@ -11,8 +11,14 @@ $(document).ready( function () {
 			
 			for(i = 0; i < allTabs.length - 1; i++)
 			{
-				var url = (allTabs[i].url).substring(0,(allTabs[i].url).length - 1);;
+				var shorten = new RegExp(".+\\.[a-z]{2,6}.+\\/$","g");
+				var url = (allTabs[i].url);
+				if(!("chrome://newtab/"==(url))){
+				if(shorten.test(url)){
+				url = (allTabs[i].url).substring(0,(allTabs[i].url).length - 1);
+				}
 				$('#sitelist').append('<div class="site"><span class="linkX">'+'<a href='+url+'>'+url+'</a>'+'<img id="del" src=' + chrome.extension.getURL('x.png') + '></span></div>');
+				}
 			}
 			$('.site img').hide();
 		$('.site').mouseenter(function() {
