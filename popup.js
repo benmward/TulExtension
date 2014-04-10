@@ -17,11 +17,15 @@ $(document).ready( function () {
 				var shorten = new RegExp(".+\\.[a-z]{2,6}.+\\/$","g");
 				var notchrome = new RegExp("^chrome.+$","g");
 				var url = (allTabs[i]);
+				var dispurl = (allTabs[i]);
+				if(dispurl.length > 95){
+					dispurl = dispurl.substring(0,95) + "...";
+				}
 				if(!(notchrome.test(url))){
 					if(shorten.test(url)){
 						url = (allTabs[i]).substring(0,(allTabs[i]).length - 1);
 					}
-					$('#sitelist').append('<div class="site"><span class="linkX">'+'<a href='+url+'>'+url+'</a>'+'<img id="del" src=' + chrome.extension.getURL('x.png') + '></span></div>');
+					$('#sitelist').append('<div class="site"><span class="linkX">'+'<a href='+url+'>'+dispurl+'</a>'+'<img id="del" src=' + chrome.extension.getURL('x.png') + '></span></div>');
 				}
 			}
 			$('.site img').hide();
