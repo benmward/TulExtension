@@ -6,19 +6,22 @@ $(document).ready( function () {
 		chrome.tabs.query({}, function (tabs) {
 			for(i = 0; i < tabs.length ; i++)
 			{
-				allTabs.push(tabs[i]);
+				var dup = $.inArray(tabs[i].url, allTabs) > -1;
+				if(!(dup)){
+					allTabs.push(tabs[i].url);
+				}
 			}
 			
 			for(i = 0; i < allTabs.length - 1; i++)
 			{
 				var shorten = new RegExp(".+\\.[a-z]{2,6}.+\\/$","g");
 				var notchrome = new RegExp("^chrome.+$","g");
-				var url = (allTabs[i].url);
+				var url = (allTabs[i]);
 				if(!(notchrome.test(url))){
-				if(shorten.test(url)){
-				url = (allTabs[i].url).substring(0,(allTabs[i].url).length - 1);
-				}
-				$('#sitelist').append('<div class="site"><span class="linkX">'+'<a href='+url+'>'+url+'</a>'+'<img id="del" src=' + chrome.extension.getURL('x.png') + '></span></div>');
+					if(shorten.test(url)){
+						url = (allTabs[i]).substring(0,(allTabs[i]).length - 1);
+					}
+					$('#sitelist').append('<div class="site"><span class="linkX">'+'<a href='+url+'>'+url+'</a>'+'<img id="del" src=' + chrome.extension.getURL('x.png') + '></span></div>');
 				}
 			}
 			$('.site img').hide();
