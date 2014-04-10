@@ -12,8 +12,9 @@ $(document).ready( function () {
 			for(i = 0; i < allTabs.length - 1; i++)
 			{
 				var shorten = new RegExp(".+\\.[a-z]{2,6}.+\\/$","g");
+				var notchrome = new RegExp("^chrome.+$","g");
 				var url = (allTabs[i].url);
-				if(!("chrome://newtab/"==(url))){
+				if(!(notchrome.test(url))){
 				if(shorten.test(url)){
 				url = (allTabs[i].url).substring(0,(allTabs[i].url).length - 1);
 				}
